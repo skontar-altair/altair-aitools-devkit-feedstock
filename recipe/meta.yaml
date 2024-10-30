@@ -14,7 +14,7 @@ build:
     - build-extension = altair_aitools.ext._builder:build_extension
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
