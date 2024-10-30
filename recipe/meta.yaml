@@ -30,8 +30,6 @@ requirements:
     - pyyaml >=6.0.0,<7.0.0
     - rapidminer >=2024.1.0,<2025.0.0
     - websockets >=12.0.0,<13.0.0
-    - networkx >=3.0,<4
-    - pipdeptree >=2.20,<3
   run_constrained:
     - pillow >=10.3.0,<11.0.0
     - typing_extensions >=4.12.2,<5.0.0
