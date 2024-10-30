@@ -1,5 +1,5 @@
 {% set name = "altair-aitools-devkit" %}
-{% set version = "1.0b1" %}
+{% set version = "1.0b2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://maven.rapidminer.com/repository/pypi-snapshot/packages/altair-aitools-devkit/{{ version }}/altair_aitools_devkit-{{ version }}.tar.gz
-  sha256: 6e46ec581f463fdddd0ca5abab3c60da3ea82c275456785e145f88892486c9c3
+  sha256: 7d1e5ade242515577b4c0bf72ca98427696a5ab9c964e57665c1682673a4cdfb
 
 build:
   entry_points:
     - build-extension = altair_aitools.ext._builder:build_extension
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -30,6 +30,9 @@ requirements:
     - pyyaml >=6.0.0,<7.0.0
     - rapidminer >=2024.1.0,<2025.0.0
     - websockets >=12.0.0,<13.0.0
+    - networkx >=3.0,<4
+    - pipdeptree >=2.20,<3
+    - libmambapy >=2.0
   run_constrained:
     - pillow >=10.3.0,<11.0.0
     - typing_extensions >=4.12.2,<5.0.0
