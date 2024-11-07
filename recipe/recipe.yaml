@@ -1,5 +1,3 @@
-schema_version: 1
-
 context:
   name: altair-aitools-devkit
   version: 1.0b3
