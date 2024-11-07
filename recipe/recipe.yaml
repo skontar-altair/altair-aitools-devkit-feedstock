@@ -13,7 +13,7 @@ source:
   sha256: 86df88865c9aab94fbc704ec74215970117547e500dc3cdcf18c454b84197c8f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -51,12 +51,13 @@ tests:
       - build-extension --help
 
 about:
-  home: https://altair.com/altair-rapidminer
   summary: altair-aitools-devkit is a comprehensive package that provides a set of tools to develop Altair RapidMiner AI tools extensions in Python
-  license: AGPL-3.0
+  license: AGPL-3.0-only
   license_file: LICENSE
+  homepage: https://altair.com/altair-rapidminer
 
 extra:
   recipe-maintainers:
     - skontar-altair
     - pczako-altair
+
