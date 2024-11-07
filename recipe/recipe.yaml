@@ -1,3 +1,5 @@
+schema_version: 1
+
 context:
   name: altair-aitools-devkit
   version: 1.0b3
@@ -20,11 +22,11 @@ build:
 
 requirements:
   host:
-    - python >=${{ python_min }}
+    - python ${{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=${{ python_min }}
+    - python >=3.9
     - networkx >=3.0,<4
     - numpy >=1.24,<2
     - packaging >=24.1,<25
