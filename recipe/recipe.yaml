@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://maven.rapidminer.com/repository/pypi-snapshot/packages/altair-aitools-devkit/${{ version }}/altair_aitools_devkit-${{ version }}.tar.gz
-  sha256: e08b856aae2b18a5f578f0dfa563f596c0840992d08f989a94f1adc6d473c4f9
+  sha256: 7e83576fafd01f5de81de01dfc92a808729eea31200b8d44204d5d16be179c4a
 
 build:
   number: 3
