@@ -1,6 +1,7 @@
 context:
   name: altair-aitools-devkit
   version: 1.0b5
+  python_min: 3.9
 
 package:
   name: ${{ name|lower }}
