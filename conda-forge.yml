@@ -5,7 +5,3 @@ github:
 #   error_overlinking: true
 conda_build_tool: rattler-build
 conda_forge_output_validation: true
-bot:
-  automerge: false
-  check_solvable: true
-  update_dependencies: false

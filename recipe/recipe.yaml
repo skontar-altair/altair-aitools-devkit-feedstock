@@ -1,6 +1,6 @@
 context:
   name: altair-aitools-devkit
-  version: 1.0b4
+  version: 1.0b5
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://maven.rapidminer.com/repository/pypi-snapshot/packages/altair-aitools-devkit/${{ version }}/altair_aitools_devkit-${{ version }}.tar.gz
-  sha256: c3a0c6425def4662820600a11825ea3c9dfc659387a7fe0b09d6653fd2d90aeb
+  sha256: d87c60f4e90e1927d1fabe3e771752c93ef3042f860f0c8bacc4d20fc9b21117
 
 build:
   number: 0
@@ -16,7 +16,7 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - build-extension = altair_aitools.ext._builder:build_extension
+      - build-extension = altair_aitools.dev._builder:build_extension
 
 requirements:
   host:
