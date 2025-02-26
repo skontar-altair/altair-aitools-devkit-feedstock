@@ -32,14 +32,14 @@ Current release info
 Installing altair-aitools-devkit
 ================================
 
-Installing `altair-aitools-devkit` from the `conda-forge/label/altair-aitools-devkit_rc` channel can be achieved by adding `conda-forge/label/altair-aitools-devkit_rc` to your channels with:
+Installing `altair-aitools-devkit` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
-conda config --add channels conda-forge/label/altair-aitools-devkit_rc
+conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge/label/altair-aitools-devkit_rc` channel has been enabled, `altair-aitools-devkit` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `altair-aitools-devkit` can be installed with `conda`:
 
 ```
 conda install altair-aitools-devkit
@@ -54,26 +54,26 @@ mamba install altair-aitools-devkit
 It is possible to list all of the versions of `altair-aitools-devkit` available on your platform with `conda`:
 
 ```
-conda search altair-aitools-devkit --channel conda-forge/label/altair-aitools-devkit_rc
+conda search altair-aitools-devkit --channel conda-forge
 ```
 
 or with `mamba`:
 
 ```
-mamba search altair-aitools-devkit --channel conda-forge/label/altair-aitools-devkit_rc
+mamba search altair-aitools-devkit --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search altair-aitools-devkit --channel conda-forge/label/altair-aitools-devkit_rc
+mamba repoquery search altair-aitools-devkit --channel conda-forge
 
 # List packages depending on `altair-aitools-devkit`:
-mamba repoquery whoneeds altair-aitools-devkit --channel conda-forge/label/altair-aitools-devkit_rc
+mamba repoquery whoneeds altair-aitools-devkit --channel conda-forge
 
 # List dependencies of `altair-aitools-devkit`:
-mamba repoquery depends altair-aitools-devkit --channel conda-forge/label/altair-aitools-devkit_rc
+mamba repoquery depends altair-aitools-devkit --channel conda-forge
 ```
 
 

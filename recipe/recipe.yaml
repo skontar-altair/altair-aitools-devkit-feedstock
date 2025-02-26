@@ -1,6 +1,7 @@
 context:
   name: altair-aitools-devkit
-  version: 1.0b3
+  version: 1.0b5
+  python_min: 3.9
 
 package:
   name: ${{ name|lower }}
@@ -8,40 +9,34 @@ package:
 
 source:
   url: https://maven.rapidminer.com/repository/pypi-snapshot/packages/altair-aitools-devkit/${{ version }}/altair_aitools_devkit-${{ version }}.tar.gz
-  sha256: 84ea3b0c946f75802a79bc3f903a8bb612eb108a948cffb49b8d12bebe4786ca
+  sha256: d87c60f4e90e1927d1fabe3e771752c93ef3042f860f0c8bacc4d20fc9b21117
 
 build:
-  number: 9
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
     entry_points:
-      - build-extension = altair_aitools.ext._builder:build_extension
+      - build-extension = altair_aitools.dev._builder:build_extension
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ==${{ python_min }}
     - hatchling
     - pip
   run:
-    - python >=3.9,<3.13
-    - networkx >=3.0,<4
-    - numpy >=1.24,<2
-    - packaging >=24.1,<25
-    - pandas >=2.0.0,<3
-    - pillow >=10.3.0,<11
-    - pipdeptree >=2.20,<3
-    - pydantic >=2.0.0,<3
-    - pyyaml >=6.0,<7
-    - rapidminer >=2024.1.0
-    - websockets >=12.0,<14
-    - conda-index >=0.5.0,<0.6
-    - libmambapy >=2.0,<3
+  - python >=${{ python_min }}
+  - networkx >=3.0,<4
+  - pipdeptree >=2.20,<3
+  - pyyaml >=6.0,<7
+  - conda-index >=0.5.0,<0.6
+  - libmambapy >=2.0,<3
+  - altair-aitools-runtime >=1.0b5
 
 tests:
   - python:
       imports:
-        - altair_aitools
+        - altair_aitools.dev
   - requirements:
       run:
         - pip
