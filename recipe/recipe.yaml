@@ -1,6 +1,6 @@
 context:
   name: altair-aitools-devkit
-  version: 1.0rc1
+  version: 1.0
   python_min: 3.9
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://maven.rapidminer.com/repository/pypi-snapshot/packages/altair-aitools-devkit/${{ version }}/altair_aitools_devkit-${{ version }}.tar.gz
-  sha256: 410550a1c0dbda2f4297d8a2ef6a0a8386ab2746cab5fe2c23501964a333d0f5
+  sha256: 91835b08889c86de3b0157cc4de57a9c2a9680eaf6b874f057679f395b6196da
 
 build:
   number: 0
@@ -33,7 +33,7 @@ requirements:
   - conda-index >=0.5.0,<0.6
   - conda-lock >=2.5,<2.6
   - libmambapy >=2.0
-  - altair-aitools-runtime >=1.0rc1
+  - altair-aitools-runtime >=1.0
 
 tests:
   - python:
